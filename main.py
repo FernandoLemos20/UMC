@@ -24,7 +24,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ==================== Configurações Gemini ====================
-# Substitua pela sua chave de API real!
 
 
 class App(ctk.CTk):
@@ -65,11 +64,9 @@ class App(ctk.CTk):
             # Mostra o erro na inicialização, mas permite que o app continue sem o chatbot
             CTkMessagebox(title="Erro API Gemini", message=error_message, icon="cancel")
             self.gemini_chat = None # Garante que o chat está None se falhar
-        # ---------------------------
+        
 
-        # Criar tabelas do banco (chamar apenas uma vez)
-        # Movido para antes da inicialização da App se necessário, mas aqui está ok
-        # criar_tabelas()
+       
 
         # Container principal para alternar os frames
         self.container = ctk.CTkFrame(self)
@@ -119,9 +116,7 @@ class App(ctk.CTk):
         frame.grid(row=0, column=0, sticky="nsew")
 
     def mostrar_frame(self, nome_frame):
-        # Atualizar listas antes de mostrar (se a função existir no frame)
-        # if nome_frame in self.frames and hasattr(self.frames[nome_frame], "atualizar_lista_publica"):
-        #      self.frames[nome_frame].atualizar_lista_publica()
+       
              
         frame = self.frames[nome_frame]
         frame.tkraise() # Traz o frame para a frente

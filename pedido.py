@@ -5,7 +5,7 @@ import mysql.connector
 from database import conectar
 from ia import gerar_descricao_pedido
 
-# Alterado de abrir_tela para criar_frame_tela
+
 def criar_frame_tela(master, app):
     frame_pedido = ctk.CTkFrame(master)
     
@@ -225,7 +225,7 @@ def criar_frame_tela(master, app):
                     cursor.close()
                     conn.close()
 
-    # Janela de edição Toplevel relativa à janela principal (app)
+    
     def editar_pedido(id_, master_app):
         janela_editar = ctk.CTkToplevel(master_app)
         janela_editar.title("Editar Pedido")
@@ -262,7 +262,7 @@ def criar_frame_tela(master, app):
         # Buscar dados atualizados para os ComboBoxes de edição
         motoristas_edit_data = buscar_motoristas()
         veiculos_edit_data = buscar_veiculos()
-        clientes_edit_data = buscar_clientes() # Já busca endereço, mas só precisamos do nome para o combo
+        clientes_edit_data = buscar_clientes() 
 
         motorista_nomes_edit = [m[1] for m in motoristas_edit_data]
         veiculo_placas_edit = [v[1] for v in veiculos_edit_data]

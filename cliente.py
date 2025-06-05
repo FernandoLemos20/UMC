@@ -3,7 +3,7 @@ import mysql.connector
 from tkinter import messagebox
 from database import conectar
 
-# Alterado de abrir_tela para criar_frame_tela
+
 def criar_frame_tela(master, app):
     frame_cliente = ctk.CTkFrame(master)
 
@@ -94,7 +94,7 @@ def criar_frame_tela(master, app):
                     cursor.close()
                     conn.close()
 
-    # Janela de edição continua Toplevel, relativa à janela principal (app)
+   
     def editar_cliente(id_, master_app):
         janela_editar = ctk.CTkToplevel(master_app)
         janela_editar.title("Editar Cliente")

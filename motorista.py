@@ -3,7 +3,7 @@ from tkinter import messagebox
 import mysql.connector
 from database import conectar
 
-# Alterado de abrir_tela para criar_frame_tela
+
 def criar_frame_tela(master, app): 
     # Cria um frame dentro do container principal (master)
     frame_motorista = ctk.CTkFrame(master)
@@ -95,7 +95,7 @@ def criar_frame_tela(master, app):
                     cursor.close()
                     conn.close()
 
-    # A janela de edição continua sendo Toplevel, mas agora relativa à janela principal (app)
+    
     def editar_motorista(id_, master_app):
         janela_editar = ctk.CTkToplevel(master_app)
         janela_editar.title("Editar Motorista")

@@ -3,7 +3,7 @@
 import mysql.connector
 from collections import defaultdict
 
-# Tenta importar bibliotecas opcionais para visualização
+
 try:
     import networkx as nx
     import matplotlib.pyplot as plt
@@ -13,9 +13,8 @@ except ImportError:
     print("Aviso: Bibliotecas networkx e matplotlib não encontradas. A visualização do grafo não estará disponível.")
     print("Para visualizar o grafo, instale as bibliotecas: pip install networkx matplotlib")
 
-# Importa a função de conexão do seu projeto
-# Certifique-se que este script esteja no mesmo diretório que database.py
-# ou ajuste o import conforme a estrutura do seu projeto.
+
+
 try:
     from database import conectar
 except ImportError:
@@ -122,8 +121,7 @@ def gerar_e_mostrar_grafo(adj_list):
     print("\n--- Informações do Grafo ---")
     print(f"Número de nós (Clientes): {G.number_of_nodes()}")
     print(f"Número de arestas (Conexões via Motorista): {G.number_of_edges()}")
-    # print(f"Nós: {list(G.nodes())}")
-    # print(f"Arestas: {list(G.edges())}")
+   
     print("---------------------------")
 
     # Desenha o grafo
@@ -149,7 +147,7 @@ def main():
         return
         
     print(f"\nTotal de registros de pedidos (cliente_id, motorista_id) encontrados: {len(pedidos)}")
-    # print("Dados brutos:", pedidos) # Descomente para ver os dados brutos
+   
 
     print("\nGerando a lista de adjacências...")
     lista_adj = criar_lista_adjacencia_clientes_por_motorista(pedidos)

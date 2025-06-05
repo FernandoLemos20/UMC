@@ -3,7 +3,7 @@ import mysql.connector
 from tkinter import messagebox
 from database import conectar
 
-# Alterado de abrir_tela para criar_frame_tela
+
 def criar_frame_tela(master, app):
     frame_veiculo = ctk.CTkFrame(master)
 

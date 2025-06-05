@@ -10,8 +10,7 @@ def conectar():
         )
     except mysql.connector.Error as err:
         print(f"Erro ao conectar ao banco de dados: {err}")
-        # Você pode querer tratar o erro de forma diferente, como lançar uma exceção
-        # ou retornar None e verificar isso nas funções que chamam conectar()
+       
         return None
 
 def criar_tabelas():
@@ -71,7 +70,5 @@ def criar_tabelas():
         cursor.close()
         conn.close()
 
-# Opcional: Chamar criar_tabelas() aqui se você quiser garantir que elas existam
-# na primeira vez que o módulo database for importado.
-# criar_tabelas()
+
 

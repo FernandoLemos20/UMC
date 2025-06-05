@@ -92,7 +92,7 @@ def criar_frame_tela(master, app):
             # Criar gráfico de pizza
             fig, ax = plt.subplots(figsize=(7, 4))
             colors = plt.cm.plasma([i/float(len(placas)) for i in range(len(placas))])
-            # CORREÇÃO: Remover barras invertidas desnecessárias e ajustar autopct
+           
             wedges, texts, autotexts = ax.pie(contagens, labels=placas, autopct='%1.1f%%', colors=colors, startangle=90)
             ax.set_title("Distribuição de Entregas por Veículo")
             # plt.setp(autotexts, size=8, weight="bold", color="white") # Ajustar se necessário
@@ -114,7 +114,7 @@ def criar_frame_tela(master, app):
         if canvas_grafico:
             canvas_grafico.get_tk_widget().destroy()
             canvas_grafico = None
-        # CORREÇÃO: Remover barras invertidas desnecessárias
+        
         plt.close('all') 
 
     # --- Interface Principal do Frame Relatórios ---

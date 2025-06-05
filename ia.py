@@ -1,5 +1,5 @@
 import google.generativeai as genai
-# REMOVA a linha genai.configure daqui
+
 
 # A função agora recebe o 'model' como primeiro argumento
 def gerar_descricao_pedido(model, cliente_nome, motorista_nome, veiculo_placa):
@@ -23,5 +23,5 @@ def gerar_descricao_pedido(model, cliente_nome, motorista_nome, veiculo_placa):
         print(f"Erro na API Gemini ao gerar descrição: {e}")
         # Retorna uma mensagem de erro ou lança a exceção
         # return f"Erro ao contatar a IA: {e}"
-        # É melhor tratar o erro onde a função é chamada (em pedido.py)
+        
         raise e 

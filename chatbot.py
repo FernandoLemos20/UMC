@@ -14,8 +14,8 @@ gemini_chat_obj = None
 gemini_model = None  # Adicionado para ter acesso ao modelo
 
 # Constantes para controle de fallback
-MODELO_PRINCIPAL = "models/gemini-1.5-flash"  # Modelo mais leve e com menos restrições de cota
-MODELO_FALLBACK = "models/gemini-1.5-flash-latest"   # Alternativa em caso de erro
+MODELO_PRINCIPAL = "models/gemini-1.5-flash"  
+MODELO_FALLBACK = "models/gemini-1.5-flash-latest"   
 usando_modelo_fallback = False
 
 def processar_mensagem_em_thread(texto_usuario):
@@ -25,7 +25,7 @@ def processar_mensagem_em_thread(texto_usuario):
     # Envia para a API Gemini e obtém a resposta
     texto_resposta = ""
     try:
-        # Tenta usar o objeto de chat atual
+       
         resposta = gemini_chat_obj.send_message(texto_usuario)
         texto_resposta = resposta.text
     except Exception as e:
